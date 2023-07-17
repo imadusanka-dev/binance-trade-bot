@@ -14,6 +14,8 @@ export const tradeTypes = {
 };
 
 export const symbols = {
-  BTCUSDT: "BTCUSDT",
-  ETHUSDT: "ETHUSDT",
+  BTC: "BTC",
+  ETH: "ETH",
+  BNB: "BNB",
+  USDT: "USDT",
 };
