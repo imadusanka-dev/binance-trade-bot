@@ -40,13 +40,12 @@ class Trader {
       //if entry is more than 2 hours, do nothing
       const difference = dayjs().diff(dayjs(lastEnvelope.time), "hour");
 
-      // if (difference > 2) {
-      //   console.log(
-      //     `-----difference is more than 1 hour. not trading. difference: ${difference} hours`,
-      //   );
-      //   return;
-      // }
-      console.log("------diff", difference);
+      if (difference > 2) {
+        console.log(
+          `-----difference is more than 1 hour. not trading. difference: ${difference} hours`,
+        );
+        return;
+      }
 
       //generate message
       const message = `${this.bsaeCurrency}/${this.quoteCurrency} - ${
