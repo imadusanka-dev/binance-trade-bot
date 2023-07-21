@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import { config } from "./config.js";
 import binanceService from "./service/binance-service.js";
 import telegramService from "./service/telegram-service.js";
@@ -32,6 +33,16 @@ class Trader {
 
       //get last envelope
       const lastEnvelope = envelope[envelope.length - 1];
+
+      //if entry is more than 2 hours, do nothing
+      const difference = dayjs().diff(dayjs(lastEnvelope.time), "hour");
+
+      if (difference > 2) {
+        console.log(
+          `-----difference is more than 1 hour. not trading. difference: ${difference} hours`,
+        );
+        return;
+      }
 
       //generate message
       const message = `${this.bsaeCurrency}/${this.quoteCurrency} - ${
