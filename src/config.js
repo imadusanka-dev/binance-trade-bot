@@ -3,6 +3,6 @@ export const config = {
   BANDWIDTH: 8,
   MULTIPLIER: 3,
   INTERVAL: "30m",
-  BINANCE_API_KEY: process.env.BINANCE_API_KEY,
-  BINANCE_API_SECRET: process.env.BINANCE_API_SECRET,
+  TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN,
+  TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID,
 };
