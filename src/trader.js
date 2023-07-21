@@ -11,6 +11,9 @@ class Trader {
   }
   async run() {
     try {
+      console.log(
+        `-----Running Trader for ${this.bsaeCurrency}/${this.quoteCurrency}`,
+      );
       //get symbol
       const symbol = `${this.bsaeCurrency}${this.quoteCurrency}`;
 
